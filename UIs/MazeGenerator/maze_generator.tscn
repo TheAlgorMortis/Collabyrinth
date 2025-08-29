@@ -1,0 +1,194 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg01udvaht8j4"]
+
+[ext_resource type="Script" uid="uid://4tqjdykr2dul" path="res://UIs/MazeGenerator/maze_generator.gd" id="1_5vdgo"]
+[ext_resource type="FontFile" uid="uid://blukwtv3sng2w" path="res://fonts/Gamer.ttf" id="1_siryg"]
+[ext_resource type="PackedScene" uid="uid://bgumn7i1xlkvy" path="res://mazes/trimmed_maze.tscn" id="2_5d02k"]
+
+[node name="MazeGenerator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5vdgo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="dims_hbox" type="HBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="dims_caption" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "MAZE DIAMETER:"
+
+[node name="dims_spin" type="SpinBox" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 5.0
+max_value = 60.0
+value = 13.0
+
+[node name="d_hbox" type="HBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="d_caption" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/d_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "D SCALE"
+
+[node name="d_slider" type="HSlider" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/d_hbox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+value = 50.0
+
+[node name="d_lab" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/d_hbox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "50
+"
+
+[node name="c_hbox" type="HBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="c_caption" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/c_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "C SCALE"
+
+[node name="c_slider" type="HSlider" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/c_hbox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+value = 50.0
+
+[node name="c_lab" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/c_hbox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "50
+"
+
+[node name="b_hbox" type="HBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="b_caption" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/b_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "B SCALE"
+
+[node name="b_slider" type="HSlider" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/b_hbox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+value = 50.0
+
+[node name="b_lab" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/b_hbox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "50
+"
+
+[node name="r_hbox" type="HBoxContainer" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="r_caption" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/r_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "R SCALE"
+
+[node name="r_slider" type="HSlider" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/r_hbox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+value = 50.0
+
+[node name="r_lab" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer/r_hbox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 34
+text = "50
+"
+
+[node name="start_button" type="Button" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_siryg")
+theme_override_font_sizes/font_size = 40
+text = "GENERATE"
+
+[node name="Panel2" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TrimmedMaze" parent="HBoxContainer/Panel2" instance=ExtResource("2_5d02k")]
+layout_mode = 1
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[connection signal="value_changed" from="HBoxContainer/Panel/MarginContainer/VBoxContainer/d_hbox/d_slider" to="." method="_on_d_slider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/Panel/MarginContainer/VBoxContainer/c_hbox/c_slider" to="." method="_on_c_scalar_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/Panel/MarginContainer/VBoxContainer/b_hbox/b_slider" to="." method="_on_b_slider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/Panel/MarginContainer/VBoxContainer/r_hbox/r_slider" to="." method="_on_r_slider_value_changed"]
+[connection signal="button_down" from="HBoxContainer/Panel/MarginContainer/VBoxContainer/start_button" to="." method="_on_start_button_button_down"]

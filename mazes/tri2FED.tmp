@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgumn7i1xlkvy"]
+
+[ext_resource type="Script" path="res://mazes/trimmed_maze.gd" id="1_8l5hx"]
+[ext_resource type="PackedScene" uid="uid://dvlufd8jxxaa5" path="res://mazes/MazeBorders/maze_border.tscn" id="2_xnxge"]
+[ext_resource type="PackedScene" uid="uid://bkali6kjfiph7" path="res://mazes/basic_maze.tscn" id="3_bjyh0"]
+
+[node name="TrimmedMaze" type="Node2D"]
+script = ExtResource("1_8l5hx")
+
+[node name="Container" type="Container" parent="."]
+clip_contents = true
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node2D" type="Node2D" parent="Container"]
+
+[node name="BasicMaze" parent="Container/Node2D" instance=ExtResource("3_bjyh0")]
+
+[node name="MazeBorder" parent="." instance=ExtResource("2_xnxge")]

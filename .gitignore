@@ -1,0 +1,16 @@
+# Godot 4+ specific ignores
+.godot/
+Collabyrinth.docx
+.import/
+bin/
+dist/
+export/
+*.pck
+*.zip
+*.idea
+*.vscode/
+.mono/
+**/obj/
+**/bin/
+.vs/
+.export/

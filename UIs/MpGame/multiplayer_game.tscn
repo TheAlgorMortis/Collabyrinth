@@ -1,0 +1,305 @@
+[gd_scene load_steps=7 format=3 uid="uid://3l1h5oa0xnpr"]
+
+[ext_resource type="Script" uid="uid://qhepiij148h2" path="res://UIs/MpGame/multiplayer_game.gd" id="1_vse6x"]
+[ext_resource type="FontFile" uid="uid://bkess1t0xjumw" path="res://fonts/prstartk.ttf" id="2_5fm7v"]
+[ext_resource type="PackedScene" uid="uid://bgumn7i1xlkvy" path="res://mazes/trimmed_maze.tscn" id="2_646u2"]
+[ext_resource type="FontFile" uid="uid://blukwtv3sng2w" path="res://fonts/Gamer.ttf" id="3_xh3b3"]
+
+[sub_resource type="Theme" id="Theme_w6jkq"]
+
+[sub_resource type="Theme" id="Theme_ywvv7"]
+
+[node name="MultiplayerGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vse6x")
+metadata/_edit_vertical_guides_ = [-117.0]
+
+[node name="UiController" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings" type="GridContainer" parent="UiController"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 10
+
+[node name="SettingsButton" type="Button" parent="UiController/Settings"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 40
+text = "⚙️"
+
+[node name="HostSettings" type="PanelContainer" parent="UiController/Settings"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="game_margin" type="MarginContainer" parent="UiController/Settings/HostSettings"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="game_vbox" type="VBoxContainer" parent="UiController/Settings/HostSettings/game_margin"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_w6jkq")
+theme_override_constants/separation = 16
+
+[node name="game_label" type="Label" parent="UiController/Settings/HostSettings/game_margin/game_vbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_5fm7v")
+theme_override_font_sizes/font_size = 25
+text = "GAME SETTINGS"
+
+[node name="code_hbox" type="HBoxContainer" parent="UiController/Settings/HostSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="code_caption" type="Label" parent="UiController/Settings/HostSettings/game_margin/game_vbox/code_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "GAME CODE:"
+
+[node name="Code_label" type="Label" parent="UiController/Settings/HostSettings/game_margin/game_vbox/code_hbox"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "00000
+"
+
+[node name="copy_code" type="Button" parent="UiController/Settings/HostSettings/game_margin/game_vbox/code_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 40
+text = "COPY
+"
+
+[node name="dims_hbox" type="HBoxContainer" parent="UiController/Settings/HostSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="dims_caption" type="Label" parent="UiController/Settings/HostSettings/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "MAZE RADIUS:"
+
+[node name="dims_spin" type="SpinBox" parent="UiController/Settings/HostSettings/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 1.0
+max_value = 20.0
+value = 5.0
+
+[node name="radius_hbox" type="HBoxContainer" parent="UiController/Settings/HostSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="radius_caption" type="Label" parent="UiController/Settings/HostSettings/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "VIEW RADIUS:"
+
+[node name="radius_spin" type="SpinBox" parent="UiController/Settings/HostSettings/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 1.0
+max_value = 20.0
+value = 2.0
+
+[node name="axes_hbox" type="HBoxContainer" parent="UiController/Settings/HostSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="axes_caption" type="Label" parent="UiController/Settings/HostSettings/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "HOST'S AXIS:"
+
+[node name="axes_spin" type="OptionButton" parent="UiController/Settings/HostSettings/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 0
+item_count = 2
+popup/item_0/text = "X"
+popup/item_0/id = 0
+popup/item_1/text = "Y"
+popup/item_1/id = 1
+
+[node name="ClientSettings" type="PanelContainer" parent="UiController/Settings"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="game_margin" type="MarginContainer" parent="UiController/Settings/ClientSettings"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="game_vbox" type="VBoxContainer" parent="UiController/Settings/ClientSettings/game_margin"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_ywvv7")
+theme_override_constants/separation = 16
+
+[node name="game_label" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_5fm7v")
+theme_override_font_sizes/font_size = 25
+text = "GAME SETTINGS"
+
+[node name="dims_hbox" type="HBoxContainer" parent="UiController/Settings/ClientSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="dims_caption" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "MAZE RADIUS:"
+
+[node name="dims_label" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "5"
+
+[node name="radius_hbox" type="HBoxContainer" parent="UiController/Settings/ClientSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="radius_caption" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "VIEW RADIUS:"
+
+[node name="radius_label" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "5"
+
+[node name="axes_hbox" type="HBoxContainer" parent="UiController/Settings/ClientSettings/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="axes_caption" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "YOUR AXIS:"
+
+[node name="axes_label" type="Label" parent="UiController/Settings/ClientSettings/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 34
+text = "X"
+
+[node name="Collabyrinth" parent="UiController" instance=ExtResource("2_646u2")]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Controllers" type="GridContainer" parent="UiController"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 20
+
+[node name="Start" type="Button" parent="UiController/Controllers"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 40
+text = "NEXT MAZE"
+
+[node name="Panel" type="Panel" parent="UiController/Controllers"]
+layout_mode = 2
+
+[node name="Message" type="Label" parent="UiController/Controllers/Panel"]
+layout_mode = 2
+offset_left = 156.0
+offset_top = 8.0
+offset_right = 157.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="UiController/Controllers"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="Disconnect" type="Button" parent="UiController/Controllers"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 40
+text = "DISCONNECT"
+
+[node name="Abort" type="Button" parent="UiController/Controllers"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_xh3b3")
+theme_override_font_sizes/font_size = 40
+text = "ABORT"
+
+[connection signal="pressed" from="UiController/Settings/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="exited" from="UiController/Collabyrinth" to="." method="_on_collabyrinth_exited"]
+[connection signal="pressed" from="UiController/Controllers/Start" to="." method="_on_start_pressed"]

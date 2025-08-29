@@ -1,0 +1,473 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmxkgty6dm1eu"]
+
+[ext_resource type="Script" uid="uid://c6m45aqc4gq4m" path="res://UIs/MpMenu/multi_menu.gd" id="1_l650h"]
+[ext_resource type="FontFile" uid="uid://bkess1t0xjumw" path="res://fonts/prstartk.ttf" id="1_ywo1p"]
+[ext_resource type="FontFile" uid="uid://blukwtv3sng2w" path="res://fonts/Gamer.ttf" id="2_7vmte"]
+
+[sub_resource type="Theme" id="Theme_y0cti"]
+
+[node name="MultiMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l650h")
+
+[node name="vbox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="start_panel" type="PanelContainer" parent="vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="start_margin" type="MarginContainer" parent="vbox/start_panel"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="start_vbox" type="VBoxContainer" parent="vbox/start_panel/start_margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="start_label" type="Label" parent="vbox/start_panel/start_margin/start_vbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 25
+text = "MULTIPLAYER"
+
+[node name="start_hbox" type="HBoxContainer" parent="vbox/start_panel/start_margin/start_vbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="start_host" type="Button" parent="vbox/start_panel/start_margin/start_vbox/start_hbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "HOST
+"
+
+[node name="start_join" type="Button" parent="vbox/start_panel/start_margin/start_vbox/start_hbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "JOIN"
+
+[node name="mid_hbox" type="HBoxContainer" parent="vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="players_panel" type="PanelContainer" parent="vbox/mid_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="players_margin" type="MarginContainer" parent="vbox/mid_hbox/players_panel"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="players_vbox" type="VBoxContainer" parent="vbox/mid_hbox/players_panel/players_margin"]
+layout_mode = 2
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="players_label" type="Label" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 25
+text = "PLAYERS"
+
+[node name="host_lbl_hbox" type="HBoxContainer" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="host_caption" type="Label" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox/host_lbl_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "HOST:"
+
+[node name="host_player" type="Label" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox/host_lbl_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "-------"
+
+[node name="peer_lbl_hbox" type="HBoxContainer" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="peer_caption" type="Label" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox/peer_lbl_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "GUEST:"
+
+[node name="peer_player" type="Label" parent="vbox/mid_hbox/players_panel/players_margin/players_vbox/peer_lbl_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "SETTING UP CONNECTION..."
+horizontal_alignment = 1
+
+[node name="under_hbox" type="HBoxContainer" parent="vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="game_panel" type="PanelContainer" parent="vbox/under_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="game_margin" type="MarginContainer" parent="vbox/under_hbox/game_panel"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="game_vbox" type="VBoxContainer" parent="vbox/under_hbox/game_panel/game_margin"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="game_label" type="Label" parent="vbox/under_hbox/game_panel/game_margin/game_vbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 25
+text = "GAME SETTINGS"
+
+[node name="code_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="code_caption" type="Label" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/code_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "GAME CODE:"
+
+[node name="Code_label" type="Label" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/code_hbox"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "00000
+"
+
+[node name="copy_code" type="Button" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/code_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "COPY
+"
+
+[node name="dims_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="dims_caption" type="Label" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "MAZE RADIUS:"
+
+[node name="dims_spin" type="SpinBox" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 1.0
+max_value = 20.0
+value = 5.0
+
+[node name="radius_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="radius_caption" type="Label" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "VIEW RADIUS:"
+
+[node name="radius_spin" type="SpinBox" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 1.0
+max_value = 20.0
+value = 2.0
+
+[node name="axes_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="axes_caption" type="Label" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "HOST'S AXIS:"
+
+[node name="axes_spin" type="OptionButton" parent="vbox/under_hbox/game_panel/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 0
+item_count = 2
+popup/item_0/text = "X"
+popup/item_0/id = 0
+popup/item_1/text = "Y"
+popup/item_1/id = 1
+
+[node name="start_button" type="Button" parent="vbox/under_hbox/game_panel/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "START"
+
+[node name="game_panel_clients" type="PanelContainer" parent="vbox/under_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="game_margin" type="MarginContainer" parent="vbox/under_hbox/game_panel_clients"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="game_vbox" type="VBoxContainer" parent="vbox/under_hbox/game_panel_clients/game_margin"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="game_label" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 25
+text = "GAME SETTINGS"
+
+[node name="dims_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="dims_caption" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "MAZE RADIUS:"
+
+[node name="dims_label" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox/dims_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "5"
+
+[node name="radius_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="radius_caption" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "VIEW RADIUS:"
+
+[node name="radius_label" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox/radius_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "5"
+
+[node name="axes_hbox" type="HBoxContainer" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "How big the maze will be (eg radius of 3 will be a 7x7 maze, radius of 4 will be 9x9)"
+theme_override_constants/separation = 8
+
+[node name="axes_caption" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "YOUR AXIS:"
+
+[node name="axes_label" type="Label" parent="vbox/under_hbox/game_panel_clients/game_margin/game_vbox/axes_hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "X"
+
+[node name="join_panel" type="PanelContainer" parent="vbox/under_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="join_margin" type="MarginContainer" parent="vbox/under_hbox/join_panel"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="join_vbox" type="VBoxContainer" parent="vbox/under_hbox/join_panel/join_margin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="join_label" type="Label" parent="vbox/under_hbox/join_panel/join_margin/join_vbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 25
+text = "JOIN
+"
+horizontal_alignment = 1
+
+[node name="entercode_hbox" type="HBoxContainer" parent="vbox/under_hbox/join_panel/join_margin/join_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="entercode_caption" type="Label" parent="vbox/under_hbox/join_panel/join_margin/join_vbox/entercode_hbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "ENTER CODE
+"
+
+[node name="entercode_edit" type="LineEdit" parent="vbox/under_hbox/join_panel/join_margin/join_vbox/entercode_hbox"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 28
+text = "00000"
+
+[node name="paste_code" type="Button" parent="vbox/under_hbox/join_panel/join_margin/join_vbox/entercode_hbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "PASTE"
+
+[node name="code_join_button" type="Button" parent="vbox/under_hbox/join_panel/join_margin/join_vbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "JOIN"
+
+[node name="message_label" type="Label" parent="vbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="back_button" type="Button" parent="vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="back_button2" type="Button" parent="vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="disconnect_button" type="Button" parent="vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "DISCONNECT"
+
+[node name="abort_button" type="Button" parent="vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 40
+text = "ABORT"
+
+[connection signal="pressed" from="vbox/start_panel/start_margin/start_vbox/start_hbox/start_host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="vbox/start_panel/start_margin/start_vbox/start_hbox/start_join" to="." method="_on_start_join_pressed"]
+[connection signal="pressed" from="vbox/under_hbox/game_panel/game_margin/game_vbox/code_hbox/copy_code" to="." method="_on_copy_code_pressed"]
+[connection signal="value_changed" from="vbox/under_hbox/game_panel/game_margin/game_vbox/dims_hbox/dims_spin" to="." method="host_changed_ui"]
+[connection signal="value_changed" from="vbox/under_hbox/game_panel/game_margin/game_vbox/radius_hbox/radius_spin" to="." method="host_changed_ui"]
+[connection signal="item_selected" from="vbox/under_hbox/game_panel/game_margin/game_vbox/axes_hbox/axes_spin" to="." method="host_changed_ui"]
+[connection signal="pressed" from="vbox/under_hbox/game_panel/game_margin/game_vbox/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="vbox/under_hbox/join_panel/join_margin/join_vbox/entercode_hbox/paste_code" to="." method="_on_paste_code_pressed"]
+[connection signal="pressed" from="vbox/under_hbox/join_panel/join_margin/join_vbox/code_join_button" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="vbox/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="vbox/back_button2" to="." method="_on_back_button_2_pressed"]
+[connection signal="pressed" from="vbox/disconnect_button" to="." method="_on_disconnect_button_pressed"]
+[connection signal="pressed" from="vbox/abort_button" to="." method="_on_abort_button_pressed"]

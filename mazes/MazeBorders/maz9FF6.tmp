@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvlufd8jxxaa5"]
+
+[ext_resource type="Script" path="res://mazes/MazeBorders/maze_border.gd" id="1_npx02"]
+
+[node name="MazeBorder" type="Node2D"]
+script = ExtResource("1_npx02")

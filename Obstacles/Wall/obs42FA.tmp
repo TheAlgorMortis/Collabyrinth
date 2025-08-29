@@ -1,0 +1,62 @@
+[gd_scene load_steps=14 format=3 uid="uid://b8s7in5elfaqj"]
+
+[ext_resource type="PackedScene" uid="uid://n42wxep51ogf" path="res://Obstacles/abstract_obstacle.tscn" id="1_y02jo"]
+[ext_resource type="Texture2D" uid="uid://b1k4tibvmnvoe" path="res://Obstacles/Wall/UFO/frame0000.png" id="2_3w51d"]
+[ext_resource type="Script" path="res://Obstacles/Wall/obs_wall.gd" id="2_n44hb"]
+[ext_resource type="Texture2D" uid="uid://ctefamdvjue7n" path="res://Obstacles/Wall/UFO/frame0001.png" id="3_xko0k"]
+[ext_resource type="Texture2D" uid="uid://lm08jyfc3xcd" path="res://Obstacles/Wall/UFO/frame0002.png" id="4_bvono"]
+[ext_resource type="Texture2D" uid="uid://coxi28s4u04ju" path="res://Obstacles/Wall/UFO/frame0003.png" id="5_qh1u0"]
+[ext_resource type="Texture2D" uid="uid://dkvhsc03ooh7v" path="res://Obstacles/Wall/UFO/frame0004.png" id="6_pusgd"]
+[ext_resource type="Texture2D" uid="uid://blwqwmi4ii8oc" path="res://Obstacles/Wall/UFO/frame0005.png" id="7_mtgxs"]
+[ext_resource type="Texture2D" uid="uid://bul4131m87wjx" path="res://Obstacles/Wall/UFO/frame0006.png" id="8_tieph"]
+[ext_resource type="Texture2D" uid="uid://c4n8yimvwbtcy" path="res://Obstacles/Wall/UFO/frame0007.png" id="9_wtn2b"]
+[ext_resource type="Texture2D" uid="uid://ctxho7umd7wgm" path="res://Obstacles/Wall/UFO/frame0008.png" id="10_77pwk"]
+[ext_resource type="Texture2D" uid="uid://i6v0kngavxpm" path="res://Obstacles/Wall/UFO/frame0009.png" id="11_x6j30"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0pki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3w51d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xko0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bvono")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qh1u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pusgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mtgxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tieph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wtn2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_77pwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x6j30")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 10.0
+}]
+
+[node name="AbstractObstacle" instance=ExtResource("1_y02jo")]
+script = ExtResource("2_n44hb")
+
+[node name="Centre" type="AnimatedSprite2D" parent="." index="1"]
+texture_filter = 3
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_p0pki")
+animation = &"Default"
+frame_progress = 0.472022

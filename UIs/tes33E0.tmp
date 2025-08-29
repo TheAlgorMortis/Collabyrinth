@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://pk8k7rqkurqh"]
+
+[ext_resource type="Script" path="res://UIs/tester.gd" id="1_5w5a3"]
+[ext_resource type="PackedScene" uid="uid://ceqf8bl0qhqw8" path="res://UIs/MazeButton/maze_button.tscn" id="1_wxkp7"]
+
+[node name="Node2D" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_5w5a3")
+
+[node name="o" parent="." instance=ExtResource("1_wxkp7")]
+layout_mode = 2
+
+[node name="t" parent="." instance=ExtResource("1_wxkp7")]
+layout_mode = 2

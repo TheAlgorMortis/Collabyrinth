@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf5ggr0v67ipp"]
+
+[ext_resource type="Script" uid="uid://cdfcdqkllr07o" path="res://UIs/Main/main_scene.gd" id="1_7rgon"]
+[ext_resource type="PackedScene" uid="uid://82dbqgh5x7tt" path="res://UIs/Title/title_screen.tscn" id="2_b4lf3"]
+[ext_resource type="PackedScene" uid="uid://bt5opa5jyhx36" path="res://UIs/settings_menu_(main).tscn" id="3_748jm"]
+[ext_resource type="PackedScene" uid="uid://bmxkgty6dm1eu" path="res://UIs/MpMenu/multi_menu.tscn" id="4_6betm"]
+[ext_resource type="PackedScene" uid="uid://3l1h5oa0xnpr" path="res://UIs/MpGame/multiplayer_game.tscn" id="5_go0mc"]
+
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7rgon")
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleScreen" parent="." instance=ExtResource("2_b4lf3")]
+layout_mode = 1
+
+[node name="Settings" parent="." instance=ExtResource("3_748jm")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.24
+anchor_right = 0.98
+anchor_bottom = 0.98
+offset_left = -1.90735e-06
+offset_top = -27.0
+offset_right = 0.0
+offset_bottom = -6.10352e-05
+
+[node name="MultiMenu" parent="." instance=ExtResource("4_6betm")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.24
+anchor_right = 0.98
+anchor_bottom = 0.98
+
+[node name="MultiplayerGame" parent="." instance=ExtResource("5_go0mc")]
+visible = false
+layout_mode = 1
+
+[connection signal="exit" from="TitleScreen" to="." method="_on_title_screen_exit"]
+[connection signal="multi" from="TitleScreen" to="." method="_on_title_screen_multi"]
+[connection signal="play" from="TitleScreen" to="." method="_on_title_screen_play"]
+[connection signal="settings" from="TitleScreen" to="." method="_on_title_screen_settings"]
+[connection signal="done" from="Settings" to="." method="_on_settings_done"]
+[connection signal="host_starts" from="MultiMenu" to="." method="_on_multi_menu_host_starts"]
+[connection signal="return_to_main" from="MultiMenu" to="." method="_on_multi_menu_return_to_main"]

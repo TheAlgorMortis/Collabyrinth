@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://2gj0kmlyq7bp"]
+
+[ext_resource type="PackedScene" uid="uid://n42wxep51ogf" path="res://Obstacles/abstract_obstacle.tscn" id="1_l0gbc"]
+[ext_resource type="Texture2D" uid="uid://dj4gdutija6gx" path="res://Obstacles/Entrance/UFO/Main/frame0000.png" id="2_41yag"]
+[ext_resource type="Script" uid="uid://b7rcxu5nx85fr" path="res://Obstacles/Entrance/entrance.gd" id="2_gl015"]
+[ext_resource type="Texture2D" uid="uid://bw3vp0p6u47wi" path="res://Obstacles/Entrance/UFO/Main/frame0001.png" id="3_0061d"]
+[ext_resource type="Texture2D" uid="uid://cfgtk1qrakv4a" path="res://Obstacles/Entrance/UFO/Main/frame0002.png" id="4_fcnwe"]
+[ext_resource type="Texture2D" uid="uid://ytug355gwnjj" path="res://Obstacles/Entrance/UFO/Main/frame0003.png" id="5_7jnvw"]
+[ext_resource type="Texture2D" uid="uid://2ee6m6olth13" path="res://Obstacles/Entrance/UFO/Main/frame0004.png" id="6_xpfvb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kk6vk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_41yag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0061d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fcnwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7jnvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xpfvb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Entrance" instance=ExtResource("1_l0gbc")]
+script = ExtResource("2_gl015")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_kk6vk")
+frame_progress = 0.227669

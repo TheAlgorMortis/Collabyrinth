@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0xfym78djgqb"]
+
+[ext_resource type="Script" uid="uid://dr85tspgowfa8" path="res://UIs/DualCollabyrinth/dual_collabyrinth.gd" id="1_bdmva"]
+[ext_resource type="PackedScene" uid="uid://bgumn7i1xlkvy" path="res://mazes/trimmed_maze.tscn" id="2_vel8l"]
+
+[node name="DualCollabyrinth" type="Node2D"]
+script = ExtResource("1_bdmva")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TrimmedMaze" parent="HBoxContainer/Panel" instance=ExtResource("2_vel8l")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -8.0
+offset_right = -8.0
+offset_bottom = 40.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TrimmedMaze2" parent="HBoxContainer/Panel2" instance=ExtResource("2_vel8l")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -8.0
+offset_right = -8.0
+offset_bottom = 40.0

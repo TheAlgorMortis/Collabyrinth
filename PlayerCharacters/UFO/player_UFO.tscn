@@ -1,0 +1,894 @@
+[gd_scene load_steps=201 format=3 uid="uid://k5gxkym35va1"]
+
+[ext_resource type="PackedScene" uid="uid://r3nkt6amau5e" path="res://PlayerCharacters/abstract_player.tscn" id="1_2ko4p"]
+[ext_resource type="Texture2D" uid="uid://d5imgni1bllh" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0000.png" id="2_aifx8"]
+[ext_resource type="Script" uid="uid://diqoa5v3hy6uo" path="res://PlayerCharacters/UFO/player_UFO.gd" id="2_fhdss"]
+[ext_resource type="Texture2D" uid="uid://c3ew8qcc1yrtr" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0001.png" id="3_7tifr"]
+[ext_resource type="Texture2D" uid="uid://njdp45irla7t" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0002.png" id="4_1tbqw"]
+[ext_resource type="Texture2D" uid="uid://cwsuuq1ya15uv" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0003.png" id="5_imwug"]
+[ext_resource type="Texture2D" uid="uid://crw5pkvorfyrp" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0004.png" id="6_4n213"]
+[ext_resource type="Texture2D" uid="uid://cjo3cpybpywdh" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0005.png" id="7_vdahs"]
+[ext_resource type="Texture2D" uid="uid://b02mjv2sawhul" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0006.png" id="8_jm3we"]
+[ext_resource type="Texture2D" uid="uid://ctg2g2ab2gpv8" path="res://PlayerCharacters/UFO/Frames/Cockpit/Hull.png" id="8_speua"]
+[ext_resource type="Texture2D" uid="uid://difx7ue2sv1qk" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0007.png" id="9_roptk"]
+[ext_resource type="Texture2D" uid="uid://ia4al0n4b6ab" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0008.png" id="10_84wpo"]
+[ext_resource type="Texture2D" uid="uid://bmdpp3h7uw1f5" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0009.png" id="11_asa5k"]
+[ext_resource type="Texture2D" uid="uid://tuybxydmhg1x" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0010.png" id="12_plbgf"]
+[ext_resource type="Texture2D" uid="uid://bqqkfmullw0kq" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0011.png" id="13_her3j"]
+[ext_resource type="Texture2D" uid="uid://b884yf2qi8n5l" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0012.png" id="14_b67md"]
+[ext_resource type="Texture2D" uid="uid://cynepukg8iuh6" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0013.png" id="15_bbb4i"]
+[ext_resource type="Texture2D" uid="uid://eqjysbpkoawa" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0014.png" id="16_3gywa"]
+[ext_resource type="Texture2D" uid="uid://cdi06cx5a4c8u" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0015.png" id="17_l2v0o"]
+[ext_resource type="Texture2D" uid="uid://dkqpod4f2v82t" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0016.png" id="18_06vfa"]
+[ext_resource type="Texture2D" uid="uid://cl0vajy226t7f" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0017.png" id="19_jw8ji"]
+[ext_resource type="Texture2D" uid="uid://crp8c5bprh5fd" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0018.png" id="20_p7jlo"]
+[ext_resource type="Texture2D" uid="uid://ych4yw8c7pyw" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0019.png" id="21_hop6g"]
+[ext_resource type="Texture2D" uid="uid://wh2e00gp2gh8" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0020.png" id="22_qawi4"]
+[ext_resource type="Texture2D" uid="uid://b6ju5nuu7rfd7" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0021.png" id="23_k5vap"]
+[ext_resource type="Texture2D" uid="uid://jex5wlw4rhdp" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0022.png" id="24_4jvdr"]
+[ext_resource type="Texture2D" uid="uid://biyaftcvkih67" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0023.png" id="25_g1nv7"]
+[ext_resource type="Texture2D" uid="uid://c75iv6p0lb4ph" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0024.png" id="26_5re64"]
+[ext_resource type="Texture2D" uid="uid://cyheqruf5pep7" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0025.png" id="27_7fl3n"]
+[ext_resource type="Texture2D" uid="uid://bn2gbfmbnykbv" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0026.png" id="28_ihveo"]
+[ext_resource type="Texture2D" uid="uid://cqxagpp64djws" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0027.png" id="29_fakyc"]
+[ext_resource type="Texture2D" uid="uid://drhs8mrulgxp3" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0028.png" id="30_11mv3"]
+[ext_resource type="Texture2D" uid="uid://ywxpoodj8s55" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0029.png" id="31_dhi21"]
+[ext_resource type="Texture2D" uid="uid://qu64ehph87g0" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0030.png" id="32_fnjxk"]
+[ext_resource type="Texture2D" uid="uid://xfus3ju41ang" path="res://PlayerCharacters/UFO/Frames/Rings/Move/frame0031.png" id="33_c05s0"]
+[ext_resource type="Texture2D" uid="uid://cbb0hujy57ht" path="res://PlayerCharacters/UFO/Frames/Hull/Idle/Hull.png" id="34_l1upy"]
+[ext_resource type="Texture2D" uid="uid://8j01cfrguok0" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0000.png" id="35_5cm27"]
+[ext_resource type="Texture2D" uid="uid://bb54anjarbq6a" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0001.png" id="36_nmyxd"]
+[ext_resource type="Texture2D" uid="uid://hn7wsusj2n66" path="res://PlayerCharacters/UFO/Frames/Struts/Idle2/frame0000.png" id="36_s0bjv"]
+[ext_resource type="Texture2D" uid="uid://du27s02w08foa" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0002.png" id="37_n8qvw"]
+[ext_resource type="Texture2D" uid="uid://7deb0n5027vm" path="res://PlayerCharacters/UFO/Frames/Struts/Idle2/frame0001.png" id="37_rhob8"]
+[ext_resource type="Texture2D" uid="uid://cl8ywisc5af3a" path="res://PlayerCharacters/UFO/Frames/Struts/Idle2/frame0002.png" id="38_defth"]
+[ext_resource type="Texture2D" uid="uid://c7l5krc6spjv4" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0003.png" id="38_qpnvo"]
+[ext_resource type="Texture2D" uid="uid://dc37kush5yose" path="res://PlayerCharacters/UFO/Frames/Struts/Idle2/frame0003.png" id="39_twg6m"]
+[ext_resource type="Texture2D" uid="uid://chle1fwntfi2b" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0004.png" id="39_us7qr"]
+[ext_resource type="Texture2D" uid="uid://3elwbutochxp" path="res://PlayerCharacters/UFO/Frames/Struts/Idle2/frame0004.png" id="40_3tk0o"]
+[ext_resource type="Texture2D" uid="uid://c0lxuhqsl1obt" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0005.png" id="40_hkfok"]
+[ext_resource type="Texture2D" uid="uid://cr80xaji880vb" path="res://PlayerCharacters/UFO/Frames/Struts/Idle2/frame0005.png" id="41_3fm2c"]
+[ext_resource type="Texture2D" uid="uid://u3jp2wy0r4ea" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0006.png" id="41_h5ymb"]
+[ext_resource type="Texture2D" uid="uid://c0wvm52nx7so6" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0007.png" id="42_m363f"]
+[ext_resource type="Texture2D" uid="uid://6rfg10rpsd8a" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0008.png" id="43_3hs7o"]
+[ext_resource type="Texture2D" uid="uid://t2etq8a57a0u" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0009.png" id="44_iddtj"]
+[ext_resource type="Texture2D" uid="uid://b4ocpbf2dis0e" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0010.png" id="45_d5dh4"]
+[ext_resource type="Texture2D" uid="uid://c3y1oyvfvdbet" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0011.png" id="46_1jsx1"]
+[ext_resource type="Texture2D" uid="uid://bjq44u6h3ao7q" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0012.png" id="47_8xb20"]
+[ext_resource type="Texture2D" uid="uid://dagoi5dtnpomh" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0013.png" id="48_72wds"]
+[ext_resource type="Texture2D" uid="uid://y614nvyshyoh" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0014.png" id="49_vxkms"]
+[ext_resource type="Texture2D" uid="uid://efax1cnli5qu" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0015.png" id="50_be831"]
+[ext_resource type="Texture2D" uid="uid://dtppp8fvnvb3e" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0016.png" id="51_0j08w"]
+[ext_resource type="Texture2D" uid="uid://gv6kli21s7op" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0017.png" id="52_qcax3"]
+[ext_resource type="Texture2D" uid="uid://bv4ugwxnmherj" path="res://PlayerCharacters/UFO/Frames/Hull/Bump/frame0018.png" id="53_a8mq4"]
+[ext_resource type="Texture2D" uid="uid://bss8k1mh5ngw1" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0000.png" id="54_qdsqk"]
+[ext_resource type="Texture2D" uid="uid://baj4msmi7flxx" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0000.png" id="55_dqj3k"]
+[ext_resource type="Texture2D" uid="uid://dr3jc86iwac2" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0001.png" id="55_xp1vl"]
+[ext_resource type="Texture2D" uid="uid://yvj44oapuj0v" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0001.png" id="56_61tc5"]
+[ext_resource type="Texture2D" uid="uid://02rljylqyuuv" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0002.png" id="56_mj1dc"]
+[ext_resource type="Texture2D" uid="uid://dmcw1aglfbq40" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0003.png" id="57_82qad"]
+[ext_resource type="Texture2D" uid="uid://d05mx7k6feo5n" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0002.png" id="57_ndjy2"]
+[ext_resource type="Texture2D" uid="uid://b0qmo46rrla6u" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0004.png" id="58_nupi7"]
+[ext_resource type="Texture2D" uid="uid://xcxuqqyu311i" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0003.png" id="58_q6t7b"]
+[ext_resource type="Texture2D" uid="uid://crv4q65uhb70x" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0004.png" id="59_4cvvn"]
+[ext_resource type="Texture2D" uid="uid://dhs3lek4r8747" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0005.png" id="59_peqk5"]
+[ext_resource type="Texture2D" uid="uid://ddlrcoi0fm0cl" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0005.png" id="60_sidn1"]
+[ext_resource type="Texture2D" uid="uid://dp2bfux8g5io4" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0006.png" id="60_yp47x"]
+[ext_resource type="Texture2D" uid="uid://cxonepfsmcr6c" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0006.png" id="61_fxugg"]
+[ext_resource type="Texture2D" uid="uid://c8twkshc8wrwb" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0007.png" id="61_xox1t"]
+[ext_resource type="Texture2D" uid="uid://buab8wdtutyn1" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0008.png" id="62_6xof3"]
+[ext_resource type="Texture2D" uid="uid://drthogvpbv1jb" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0007.png" id="62_ent4l"]
+[ext_resource type="Texture2D" uid="uid://ctn06rix7mox1" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0009.png" id="63_252h1"]
+[ext_resource type="Texture2D" uid="uid://c35v0wu4bdh85" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0008.png" id="63_phq3l"]
+[ext_resource type="Texture2D" uid="uid://d1sstwgu2or6x" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0009.png" id="64_0b7q8"]
+[ext_resource type="Texture2D" uid="uid://cgghevg35ex7b" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0010.png" id="64_s1rkd"]
+[ext_resource type="Texture2D" uid="uid://dlf20dleyh8nr" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0010.png" id="65_6btcv"]
+[ext_resource type="Texture2D" uid="uid://bw5ep46tmlty7" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0011.png" id="65_8qi8d"]
+[ext_resource type="Texture2D" uid="uid://c8gr3ayu3bbx0" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0012.png" id="66_cek1t"]
+[ext_resource type="Texture2D" uid="uid://brsi42flfodjt" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0011.png" id="66_gcpy2"]
+[ext_resource type="Texture2D" uid="uid://b7ju2w1na6smu" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0013.png" id="67_sop12"]
+[ext_resource type="Texture2D" uid="uid://bq3no4by5ophr" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0012.png" id="67_yegmy"]
+[ext_resource type="Texture2D" uid="uid://17ccimoxql6v" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0013.png" id="68_bo0ut"]
+[ext_resource type="Texture2D" uid="uid://7icwiwo5jr85" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0014.png" id="68_mo4re"]
+[ext_resource type="Texture2D" uid="uid://b84n238vl0oda" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0015.png" id="69_u3u2k"]
+[ext_resource type="Texture2D" uid="uid://3ccq4wwflugv" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0014.png" id="69_woq1x"]
+[ext_resource type="Texture2D" uid="uid://cgdjjcvev80sw" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0016.png" id="70_a6ejj"]
+[ext_resource type="Texture2D" uid="uid://cptmwi7ys42xt" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0015.png" id="70_evrhq"]
+[ext_resource type="Texture2D" uid="uid://cqhgw1jhuvqxa" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0017.png" id="71_gl230"]
+[ext_resource type="Texture2D" uid="uid://jg6uourfumye" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0016.png" id="71_pgulh"]
+[ext_resource type="Texture2D" uid="uid://p306jtyywbc5" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0018.png" id="72_gdnha"]
+[ext_resource type="Texture2D" uid="uid://dg8a78j80iyyy" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0017.png" id="72_lbob3"]
+[ext_resource type="Texture2D" uid="uid://bdf8dhq01aclf" path="res://PlayerCharacters/UFO/Frames/Struts/Bump/frame0018.png" id="73_a8vnn"]
+[ext_resource type="Texture2D" uid="uid://cbti5suopttgo" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0019.png" id="73_rmaf7"]
+[ext_resource type="Texture2D" uid="uid://w56e00h4xw18" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0020.png" id="74_66aal"]
+[ext_resource type="Texture2D" uid="uid://su8vyrdfmtxk" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0021.png" id="75_feegc"]
+[ext_resource type="Texture2D" uid="uid://cyiyr1bm4taqm" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0022.png" id="76_ng88b"]
+[ext_resource type="Texture2D" uid="uid://c0hu35m46msng" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0023.png" id="77_k383n"]
+[ext_resource type="Texture2D" uid="uid://ykccwprahma2" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0024.png" id="78_41aek"]
+[ext_resource type="Texture2D" uid="uid://ckhp81eeitrsx" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0025.png" id="79_w74f4"]
+[ext_resource type="Texture2D" uid="uid://cw3oufli4pbbl" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0026.png" id="80_fybh7"]
+[ext_resource type="Texture2D" uid="uid://cjrpmaemrx1qp" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0027.png" id="81_hpn8e"]
+[ext_resource type="Texture2D" uid="uid://4gx445euj5kt" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0000.png" id="81_vplow"]
+[ext_resource type="Texture2D" uid="uid://djhifxdj0aa44" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0001.png" id="82_72qpm"]
+[ext_resource type="Texture2D" uid="uid://ckpwggyewgbos" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0028.png" id="82_85q6d"]
+[ext_resource type="Texture2D" uid="uid://cj6fatgd5vwbm" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0029.png" id="83_4v7if"]
+[ext_resource type="Texture2D" uid="uid://6c6cbgjgouck" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0002.png" id="83_53kpv"]
+[ext_resource type="Texture2D" uid="uid://dcajyky8n2bxt" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0003.png" id="84_6ny6x"]
+[ext_resource type="Texture2D" uid="uid://buybe4whxp3nk" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0030.png" id="84_11oih"]
+[ext_resource type="Texture2D" uid="uid://bvuklxcurx7bh" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0004.png" id="85_lhiic"]
+[ext_resource type="Texture2D" uid="uid://durscb2gaspj3" path="res://PlayerCharacters/UFO/Frames/Hull/Exit/frame0031.png" id="85_ul1d2"]
+[ext_resource type="Texture2D" uid="uid://ckndsegopkk1e" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0005.png" id="86_fsevh"]
+[ext_resource type="Texture2D" uid="uid://dxjf0xm5ivmko" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0006.png" id="87_pcftj"]
+[ext_resource type="Texture2D" uid="uid://bsvndrxd32p1b" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0007.png" id="88_ibsq5"]
+[ext_resource type="Texture2D" uid="uid://cse7ybbnwdl7a" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0008.png" id="89_0cldl"]
+[ext_resource type="Texture2D" uid="uid://bqfr7ewckjayg" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0009.png" id="90_adg0x"]
+[ext_resource type="Texture2D" uid="uid://b08ni5bsi0h5a" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0010.png" id="91_uf11o"]
+[ext_resource type="Texture2D" uid="uid://b45wprxwo0vqe" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0011.png" id="92_0oyfd"]
+[ext_resource type="Texture2D" uid="uid://granem7hi0bg" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0012.png" id="93_6xsi0"]
+[ext_resource type="Texture2D" uid="uid://yrbsq48syfay" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0013.png" id="94_a8mqp"]
+[ext_resource type="Texture2D" uid="uid://cay0575ulul2s" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0014.png" id="95_f5fry"]
+[ext_resource type="Texture2D" uid="uid://by3hkiyclp0t0" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0015.png" id="96_manxt"]
+[ext_resource type="Texture2D" uid="uid://dqap7lmumaib" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0016.png" id="97_mtlbx"]
+[ext_resource type="Texture2D" uid="uid://bahfiuewmfjh4" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0017.png" id="98_ppc1x"]
+[ext_resource type="Texture2D" uid="uid://bwghlf5mxxkh7" path="res://PlayerCharacters/UFO/Frames/Forcefield/Bump/frame0018.png" id="99_lt5rx"]
+[ext_resource type="Texture2D" uid="uid://0qeqfu282mnx" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0000.png" id="106_63osx"]
+[ext_resource type="Texture2D" uid="uid://pcicr078vkug" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0001.png" id="107_or02g"]
+[ext_resource type="Texture2D" uid="uid://cfnwtxc47to8k" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0002.png" id="108_icfkg"]
+[ext_resource type="Texture2D" uid="uid://cw376a33hbwo4" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0003.png" id="109_nrynk"]
+[ext_resource type="Texture2D" uid="uid://4y0g4reifie1" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0004.png" id="110_kp6pc"]
+[ext_resource type="Texture2D" uid="uid://fgj2x26hhle4" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0005.png" id="111_hfutu"]
+[ext_resource type="Texture2D" uid="uid://df5hgbtmkigot" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0006.png" id="112_8gs3q"]
+[ext_resource type="Texture2D" uid="uid://w2815ppqdeit" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0007.png" id="113_3ex8a"]
+[ext_resource type="Texture2D" uid="uid://dit1qk8iti4gm" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0008.png" id="114_0u2g8"]
+[ext_resource type="Texture2D" uid="uid://chdt5bmjq5dt1" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0009.png" id="115_avk5y"]
+[ext_resource type="Texture2D" uid="uid://nghh1drhesgs" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0010.png" id="116_ciiir"]
+[ext_resource type="Texture2D" uid="uid://crxo3jtivaeth" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0011.png" id="117_tkaco"]
+[ext_resource type="Texture2D" uid="uid://cswnp8bhqql7t" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0012.png" id="118_hmi3b"]
+[ext_resource type="Texture2D" uid="uid://cj0q1amwtnqm1" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0013.png" id="119_rhogc"]
+[ext_resource type="Texture2D" uid="uid://h75sc3fgfsmp" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0014.png" id="120_0h40m"]
+[ext_resource type="Texture2D" uid="uid://b44ctw0s405or" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0015.png" id="121_ognaj"]
+[ext_resource type="Texture2D" uid="uid://dm3pvdt21ojpu" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0016.png" id="122_5xfhm"]
+[ext_resource type="Texture2D" uid="uid://cdscr8d17vsir" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0017.png" id="123_ycp28"]
+[ext_resource type="Texture2D" uid="uid://5f5mju25ly6a" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0018.png" id="124_0dl1i"]
+[ext_resource type="Texture2D" uid="uid://x5p82abidc8v" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0019.png" id="125_ctmg8"]
+[ext_resource type="Texture2D" uid="uid://b6q7aby1bdo7t" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0020.png" id="126_3u431"]
+[ext_resource type="Texture2D" uid="uid://qi41mcwwgiid" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0021.png" id="127_w840q"]
+[ext_resource type="Texture2D" uid="uid://b3v2n4jrseobj" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0022.png" id="128_sj7l3"]
+[ext_resource type="Texture2D" uid="uid://biaaar47mt6xi" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0023.png" id="129_o3r4y"]
+[ext_resource type="Texture2D" uid="uid://dpacrldrsy7qp" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0024.png" id="130_opqad"]
+[ext_resource type="Texture2D" uid="uid://bhli5t7v8ql74" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0025.png" id="131_xlqg4"]
+[ext_resource type="Texture2D" uid="uid://dsuq6c633mi5f" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0026.png" id="132_jnhmv"]
+[ext_resource type="Texture2D" uid="uid://cgvfwvtkmvyh" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0027.png" id="133_sctwb"]
+[ext_resource type="Texture2D" uid="uid://vuii5wxwecsf" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0028.png" id="134_7ba61"]
+[ext_resource type="Texture2D" uid="uid://cr0v87rjvg506" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0029.png" id="135_dnylr"]
+[ext_resource type="Texture2D" uid="uid://w1aa25mog7gq" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0030.png" id="136_n1s7x"]
+[ext_resource type="Texture2D" uid="uid://d0uqicqobygal" path="res://PlayerCharacters/UFO/Frames/Struts/Exit/frame0031.png" id="137_bdalh"]
+[ext_resource type="Texture2D" uid="uid://ch0x03wtgg5ed" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0000.png" id="145_wn52l"]
+[ext_resource type="Texture2D" uid="uid://2xlu6ytq4tx4" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0001.png" id="146_805ti"]
+[ext_resource type="Texture2D" uid="uid://dsyhfb5xgtlae" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0002.png" id="147_a12tk"]
+[ext_resource type="Texture2D" uid="uid://h68gn0dd35uk" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0003.png" id="148_ap72p"]
+[ext_resource type="Texture2D" uid="uid://dcau8xbi1w6pl" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0004.png" id="149_p6nc3"]
+[ext_resource type="Texture2D" uid="uid://dxb183tedqydf" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0005.png" id="150_m1yru"]
+[ext_resource type="Texture2D" uid="uid://drhnsd2ix4pc8" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0006.png" id="151_jdjdj"]
+[ext_resource type="Texture2D" uid="uid://bvkx3tl7xsvwr" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0007.png" id="152_ly78s"]
+[ext_resource type="Texture2D" uid="uid://dsrr3px640s1j" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0008.png" id="153_opr44"]
+[ext_resource type="Texture2D" uid="uid://caem5xavxgvtg" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0009.png" id="154_uiaxl"]
+[ext_resource type="Texture2D" uid="uid://bocj08esg3t3s" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0010.png" id="155_bu5u1"]
+[ext_resource type="Texture2D" uid="uid://b3h8l5wun4d3" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0011.png" id="156_ojqxu"]
+[ext_resource type="Texture2D" uid="uid://bm6hipue775s5" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0012.png" id="157_5ir35"]
+[ext_resource type="Texture2D" uid="uid://dr2ihxr3tbr4a" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0013.png" id="158_smhcv"]
+[ext_resource type="Texture2D" uid="uid://dr2x1yrjqqsuv" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0014.png" id="159_17u2x"]
+[ext_resource type="Texture2D" uid="uid://f35cd7wptxfl" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0015.png" id="160_q2r4u"]
+[ext_resource type="Texture2D" uid="uid://buxxd1j6dm7d5" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0016.png" id="161_t05dq"]
+[ext_resource type="Texture2D" uid="uid://f12tqxrao68m" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0017.png" id="162_liktj"]
+[ext_resource type="Texture2D" uid="uid://bh1rwoo5sll87" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0018.png" id="163_gxr2y"]
+[ext_resource type="Texture2D" uid="uid://b3wqd0l3mdgaf" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0019.png" id="164_botys"]
+[ext_resource type="Texture2D" uid="uid://ds0yq0mgv7m0a" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0020.png" id="165_pesm6"]
+[ext_resource type="Texture2D" uid="uid://bsw60h4xbdryu" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0021.png" id="166_pjk7x"]
+[ext_resource type="Texture2D" uid="uid://bxh1asrvbns86" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0022.png" id="167_l6e23"]
+[ext_resource type="Texture2D" uid="uid://b3g2kvkdr2i" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0023.png" id="168_pkswl"]
+[ext_resource type="Texture2D" uid="uid://cwkvu4vu3gbul" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0024.png" id="169_mntal"]
+[ext_resource type="Texture2D" uid="uid://dm3628kq5rfxw" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0025.png" id="170_7bv10"]
+[ext_resource type="Texture2D" uid="uid://uscflwk7r03r" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0026.png" id="171_p5dvl"]
+[ext_resource type="Texture2D" uid="uid://cstkexjb3cjln" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0027.png" id="172_nrtpe"]
+[ext_resource type="Texture2D" uid="uid://ba2f4y4f006jd" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0028.png" id="173_j2hev"]
+[ext_resource type="Texture2D" uid="uid://bxvwi812cwn1g" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0029.png" id="174_k0g6t"]
+[ext_resource type="Texture2D" uid="uid://mqvuunkuotq" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0030.png" id="175_kops1"]
+[ext_resource type="Texture2D" uid="uid://b83iuoybvyhfn" path="res://PlayerCharacters/UFO/Frames/Cockpit/exit/frame0031.png" id="176_f4tjl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ul4o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_c05s0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aifx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7tifr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1tbqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_imwug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4n213")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vdahs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jm3we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_roptk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_84wpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_asa5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_plbgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_her3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b67md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bbb4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3gywa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l2v0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_06vfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jw8ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_p7jlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hop6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qawi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_k5vap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4jvdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_g1nv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5re64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7fl3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ihveo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fakyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_11mv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dhi21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fnjxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c05s0")
+}],
+"loop": false,
+"name": &"Move",
+"speed": 45.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmxd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_5cm27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nmyxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_n8qvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_qpnvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_us7qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hkfok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_h5ymb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_m363f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_3hs7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_iddtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_d5dh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_1jsx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_8xb20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_72wds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_vxkms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_be831")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_0j08w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_qcax3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_a8mq4")
+}],
+"loop": false,
+"name": &"Bump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_qdsqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xp1vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_mj1dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_82qad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_nupi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_peqk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_yp47x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_xox1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_6xof3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_252h1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_s1rkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_8qi8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_cek1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_sop12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_mo4re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_u3u2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_a6ejj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_gl230")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_gdnha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_rmaf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_66aal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_feegc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ng88b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_k383n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_41aek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_w74f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_fybh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_hpn8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_85q6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_4v7if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_11oih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ul1d2")
+}],
+"loop": false,
+"name": &"Exit",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_l1upy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1tjn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_dqj3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_61tc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ndjy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_q6t7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_4cvvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_sidn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_fxugg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ent4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_phq3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_0b7q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_6btcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_gcpy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_yegmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_bo0ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_woq1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_evrhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_pgulh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_lbob3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_a8vnn")
+}],
+"loop": false,
+"name": &"Bump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("106_63osx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_or02g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_icfkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_nrynk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_kp6pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_hfutu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_8gs3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_3ex8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_0u2g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_avk5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_ciiir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_tkaco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_hmi3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_rhogc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_0h40m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_ognaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_5xfhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_ycp28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_0dl1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_ctmg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_3u431")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_w840q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_sj7l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_o3r4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_opqad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_xlqg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_jnhmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_sctwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_7ba61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_dnylr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_n1s7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_bdalh")
+}],
+"loop": false,
+"name": &"Exit",
+"speed": 45.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_s0bjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_rhob8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_defth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_twg6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_3tk0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_3fm2c")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16k0e"]
+animations = [{
+"frames": [{
+"duration": 1.2,
+"texture": ExtResource("8_speua")
+}],
+"loop": false,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("145_wn52l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_805ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_a12tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_ap72p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_p6nc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_m1yru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_jdjdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_ly78s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_opr44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_uiaxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_bu5u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_ojqxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_5ir35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_smhcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_17u2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_q2r4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_t05dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_liktj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_gxr2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_botys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_pesm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_pjk7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_l6e23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_pkswl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_mntal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_7bv10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_p5dvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_nrtpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_j2hev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_k0g6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_kops1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_f4tjl")
+}],
+"loop": false,
+"name": &"Exit",
+"speed": 45.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t88hh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("81_vplow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_72qpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_53kpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_6ny6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_lhiic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_fsevh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_pcftj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ibsq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_0cldl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_adg0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_uf11o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_0oyfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_6xsi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_a8mqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_f5fry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_manxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_mtlbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ppc1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_lt5rx")
+}],
+"loop": false,
+"name": &"Bump",
+"speed": 30.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="UfoPlayer" instance=ExtResource("1_2ko4p")]
+script = ExtResource("2_fhdss")
+
+[node name="Rings" type="AnimatedSprite2D" parent="." index="1"]
+texture_filter = 3
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_3ul4o")
+animation = &"Move"
+
+[node name="Hull" type="AnimatedSprite2D" parent="." index="2"]
+texture_filter = 1
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_qmxd2")
+animation = &"Idle"
+
+[node name="Struts" type="AnimatedSprite2D" parent="." index="3"]
+texture_filter = 3
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_k1tjn")
+animation = &"Idle"
+
+[node name="Cockpit" type="AnimatedSprite2D" parent="." index="4"]
+texture_filter = 3
+position = Vector2(20, 20)
+scale = Vector2(1.0526, 1.00208)
+sprite_frames = SubResource("SpriteFrames_16k0e")
+animation = &"Default"
+autoplay = "Default"
+
+[node name="Forcefield" type="AnimatedSprite2D" parent="." index="5"]
+texture_filter = 3
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_t88hh")
+animation = &"Bump"
+
+[connection signal="animation_finished" from="Rings" to="." method="_on_rings_animation_finished"]
+[connection signal="frame_changed" from="Rings" to="." method="_on_rings_frame_changed"]
+[connection signal="animation_finished" from="Forcefield" to="." method="_on_forcefield_animation_finished"]
+[connection signal="frame_changed" from="Forcefield" to="." method="_on_forcefield_frame_changed"]

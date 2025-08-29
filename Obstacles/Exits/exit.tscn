@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://bg4k340hwi114"]
+
+[ext_resource type="PackedScene" uid="uid://n42wxep51ogf" path="res://Obstacles/abstract_obstacle.tscn" id="1_qo6uf"]
+[ext_resource type="Script" uid="uid://bn24uem7vqf7" path="res://Obstacles/Exits/exit.gd" id="2_ryqc2"]
+[ext_resource type="Texture2D" uid="uid://ymajb27nfajc" path="res://Obstacles/Exits/UFO/2/frame0000.png" id="3_o12gq"]
+[ext_resource type="Texture2D" uid="uid://g6xhb8eh0vvc" path="res://Obstacles/Exits/UFO/2/frame0001.png" id="4_b54l4"]
+[ext_resource type="Texture2D" uid="uid://bku3ug1v1m2vh" path="res://Obstacles/Exits/UFO/2/frame0002.png" id="5_tqxj3"]
+[ext_resource type="Texture2D" uid="uid://1scr6gyj5csg" path="res://Obstacles/Exits/UFO/2/frame0003.png" id="6_xljsi"]
+[ext_resource type="Texture2D" uid="uid://bcjmn4munuvwt" path="res://Obstacles/Exits/UFO/2/frame0004.png" id="7_3u3x4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brpgg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o12gq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b54l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tqxj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xljsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3u3x4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Exit" instance=ExtResource("1_qo6uf")]
+script = ExtResource("2_ryqc2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_brpgg")
+frame_progress = 0.768201

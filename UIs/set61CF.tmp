@@ -1,0 +1,140 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt5opa5jyhx36"]
+
+[ext_resource type="Script" path="res://UIs/settings_menu_(main).gd" id="1_c08n5"]
+[ext_resource type="FontFile" uid="uid://bkess1t0xjumw" path="res://fonts/prstartk.ttf" id="1_gautk"]
+[ext_resource type="FontFile" uid="uid://blukwtv3sng2w" path="res://fonts/Gamer.ttf" id="2_n455s"]
+
+[sub_resource type="Theme" id="Theme_nim3h"]
+
+[node name="Settings Menu (Main)" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c08n5")
+
+[node name="OuterPanels" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="LEFT PANELS" type="VBoxContainer" parent="OuterPanels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="multiplayer panel" type="PanelContainer" parent="OuterPanels/LEFT PANELS"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="multiMargin" type="MarginContainer" parent="OuterPanels/LEFT PANELS/multiplayer panel"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="mulitVbox" type="VBoxContainer" parent="OuterPanels/LEFT PANELS/multiplayer panel/multiMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_nim3h")
+theme_override_constants/separation = 16
+
+[node name="GUI settings" type="Label" parent="OuterPanels/LEFT PANELS/multiplayer panel/multiMargin/mulitVbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_gautk")
+theme_override_font_sizes/font_size = 30
+text = "MULTIPLAYER"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OuterPanels/LEFT PANELS/multiplayer panel/multiMargin/mulitVbox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="OuterPanels/LEFT PANELS/multiplayer panel/multiMargin/mulitVbox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n455s")
+theme_override_font_sizes/font_size = 34
+text = "Username:"
+
+[node name="LineEdit" type="LineEdit" parent="OuterPanels/LEFT PANELS/multiplayer panel/multiMargin/mulitVbox/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_n455s")
+theme_override_font_sizes/font_size = 28
+text = "TheNavigator"
+
+[node name="screen settings panel" type="PanelContainer" parent="OuterPanels/LEFT PANELS"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="screenMargin" type="MarginContainer" parent="OuterPanels/LEFT PANELS/screen settings panel"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="screenVbox" type="VBoxContainer" parent="OuterPanels/LEFT PANELS/screen settings panel/screenMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_nim3h")
+theme_override_constants/separation = 16
+
+[node name="Sceen settings" type="Label" parent="OuterPanels/LEFT PANELS/screen settings panel/screenMargin/screenVbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_gautk")
+theme_override_font_sizes/font_size = 30
+text = "SCREEN
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OuterPanels/LEFT PANELS/screen settings panel/screenMargin/screenVbox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Window" type="Label" parent="OuterPanels/LEFT PANELS/screen settings panel/screenMargin/screenVbox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n455s")
+theme_override_font_sizes/font_size = 34
+text = "WINDOW
+"
+
+[node name="MenuBar" type="OptionButton" parent="OuterPanels/LEFT PANELS/screen settings panel/screenMargin/screenVbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Borderless Window"
+popup/item_2/id = 2
+
+[node name="Done" type="Button" parent="OuterPanels/LEFT PANELS"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n455s")
+theme_override_font_sizes/font_size = 70
+text = "DONE"
+
+[connection signal="item_selected" from="OuterPanels/LEFT PANELS/screen settings panel/screenMargin/screenVbox/HBoxContainer/MenuBar" to="." method="_on_menu_bar_item_selected"]
+[connection signal="pressed" from="OuterPanels/LEFT PANELS/Done" to="." method="_on_done_pressed"]

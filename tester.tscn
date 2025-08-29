@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ms5fwedweobs"]
+
+[sub_resource type="Resource" id="Resource_6lib2"]
+metadata/__load_path__ = "res://mazes/collabyrinth.tscn"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Collabyrinth" parent="Panel"]

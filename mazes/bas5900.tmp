@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkali6kjfiph7"]
+
+[ext_resource type="PackedScene" uid="uid://dxpa3dfmisn60" path="res://mazes/abstract_maze.tscn" id="1_1gr8n"]
+[ext_resource type="PackedScene" uid="uid://k5gxkym35va1" path="res://PlayerCharacters/UFO/player_UFO.tscn" id="2_4pbyi"]
+[ext_resource type="Script" path="res://mazes/basic_maze.gd" id="2_1711j"]
+[ext_resource type="PackedScene" uid="uid://dvvlkh0exrklm" path="res://Backdrop/backdrop.tscn" id="2_taj8d"]
+
+[node name="BasicMaze" type="Area2D"]
+script = ExtResource("2_1711j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Backdrop" parent="." instance=ExtResource("2_taj8d")]
+
+[node name="AbstractMaze" parent="." instance=ExtResource("1_1gr8n")]
+
+[node name="ObstacleParent" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_4pbyi")]
+
+[connection signal="nudge" from="Player" to="." method="_on_player_nudge"]

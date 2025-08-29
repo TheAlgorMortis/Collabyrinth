@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgumn7i1xlkvy"]
+
+[ext_resource type="Script" path="res://mazes/trimmed_maze.gd" id="1_8l5hx"]
+[ext_resource type="PackedScene" uid="uid://dvlufd8jxxaa5" path="res://mazes/MazeBorders/maze_border.tscn" id="2_xnxge"]
+[ext_resource type="PackedScene" uid="uid://bkali6kjfiph7" path="res://mazes/basic_maze.tscn" id="3_bjyh0"]
+
+[node name="TrimmedMaze" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8l5hx")
+
+[node name="Container" type="Container" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="BasicMaze" parent="Container" instance=ExtResource("3_bjyh0")]
+
+[node name="MazeBorder" parent="Container" instance=ExtResource("2_xnxge")]
+
+[connection signal="moved" from="Container/BasicMaze" to="." method="_on_basic_maze_moved"]

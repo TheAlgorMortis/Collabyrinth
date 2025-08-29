@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceqf8bl0qhqw8"]
+
+[ext_resource type="Script" path="res://UIs/MazeButton/maze_button.gd" id="1_katvy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac831"]
+
+[node name="MazeButton" type="Area2D"]
+script = ExtResource("1_katvy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_ac831")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

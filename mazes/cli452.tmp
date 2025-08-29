@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4xpxqsgkjb6b"]
+
+[ext_resource type="Script" path="res://mazes/clipped_maze.gd" id="1_b4xxf"]
+[ext_resource type="PackedScene" uid="uid://bkali6kjfiph7" path="res://mazes/basic_maze.tscn" id="2_56rbi"]
+
+[node name="ClippedMaze" type="Container"]
+clip_contents = true
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_b4xxf")
+
+[node name="BasicMaze" parent="." instance=ExtResource("2_56rbi")]

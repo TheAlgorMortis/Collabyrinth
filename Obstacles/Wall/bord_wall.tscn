@@ -1,0 +1,106 @@
+[gd_scene load_steps=23 format=3 uid="uid://kuwbnsm6bgdn"]
+
+[ext_resource type="Script" uid="uid://bv4sxx5ooo3gg" path="res://Obstacles/Wall/bord_wall.gd" id="1_wrv6d"]
+[ext_resource type="Texture2D" uid="uid://dqkddldqqqqaw" path="res://Obstacles/Wall/UFO/Border8/frame0000.png" id="1_ypyly"]
+[ext_resource type="Texture2D" uid="uid://eyjpxvp4t2hi" path="res://Obstacles/Wall/UFO/Border8/frame0001.png" id="2_h1lce"]
+[ext_resource type="Texture2D" uid="uid://dawupjgdjfdl7" path="res://Obstacles/Wall/UFO/Border8/frame0002.png" id="3_5qf5q"]
+[ext_resource type="Texture2D" uid="uid://dywy0odoj4q2m" path="res://Obstacles/Wall/UFO/Border8/frame0003.png" id="4_aifxy"]
+[ext_resource type="Texture2D" uid="uid://dg7m7jbhrxdtw" path="res://Obstacles/Wall/UFO/Border8/frame0004.png" id="5_q0jlo"]
+[ext_resource type="Texture2D" uid="uid://2n35ivsm6otb" path="res://Obstacles/Wall/UFO/Border8/frame0005.png" id="6_0ajl6"]
+[ext_resource type="Texture2D" uid="uid://w2looyaiwq6c" path="res://Obstacles/Wall/UFO/Border8/frame0006.png" id="7_5uwr3"]
+[ext_resource type="Texture2D" uid="uid://dt8cavbk0d0ys" path="res://Obstacles/Wall/UFO/Border8/frame0007.png" id="8_832g1"]
+[ext_resource type="Texture2D" uid="uid://b6y0ee22vqdqr" path="res://Obstacles/Wall/UFO/Border8/frame0008.png" id="9_w6srg"]
+[ext_resource type="Texture2D" uid="uid://bsdmacxfaimng" path="res://Obstacles/Wall/UFO/Border8/frame0009.png" id="10_s0llv"]
+[ext_resource type="Texture2D" uid="uid://cknjh3wh81kfv" path="res://Obstacles/Wall/UFO/Border8/frame0010.png" id="11_wpqb4"]
+[ext_resource type="Texture2D" uid="uid://pxrjw3egsusk" path="res://Obstacles/Wall/UFO/Border8/frame0011.png" id="12_agvwl"]
+[ext_resource type="Texture2D" uid="uid://e7ilmawxo660" path="res://Obstacles/Wall/UFO/Border8/frame0012.png" id="13_1l53m"]
+[ext_resource type="Texture2D" uid="uid://b1m6dx7hg828w" path="res://Obstacles/Wall/UFO/Border8/frame0013.png" id="14_684c6"]
+[ext_resource type="Texture2D" uid="uid://8ctvc2t1tq4t" path="res://Obstacles/Wall/UFO/Border8/frame0014.png" id="15_d1v40"]
+[ext_resource type="Texture2D" uid="uid://d1j2qa6vwda51" path="res://Obstacles/Wall/UFO/Border8/frame0015.png" id="16_va7wq"]
+[ext_resource type="Texture2D" uid="uid://bw3stjscxrsiy" path="res://Obstacles/Wall/UFO/Border8/frame0016.png" id="17_snu25"]
+[ext_resource type="Texture2D" uid="uid://cwsiwoox2ctr8" path="res://Obstacles/Wall/UFO/Border8/frame0017.png" id="18_hlvyp"]
+[ext_resource type="Texture2D" uid="uid://qmmdp70xarji" path="res://Obstacles/Wall/UFO/Border8/frame0018.png" id="19_3hq4h"]
+[ext_resource type="Texture2D" uid="uid://ckha6xwd267d6" path="res://Obstacles/Wall/UFO/Border8/frame0019.png" id="20_cn7le"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_liy8a"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ypyly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h1lce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5qf5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aifxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q0jlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0ajl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5uwr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_832g1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w6srg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s0llv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wpqb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_agvwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1l53m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_684c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d1v40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_va7wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_snu25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hlvyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3hq4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cn7le")
+}],
+"loop": false,
+"name": &"Bump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ypyly")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BordWall" type="AnimatedSprite2D"]
+texture_filter = 3
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_liy8a")
+script = ExtResource("1_wrv6d")

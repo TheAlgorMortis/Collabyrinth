@@ -1,0 +1,286 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmxkgty6dm1eu"]
+
+[ext_resource type="Script" path="res://UIs/MpMenu/multi_menu.gd" id="1_l650h"]
+[ext_resource type="FontFile" uid="uid://bkess1t0xjumw" path="res://fonts/prstartk.ttf" id="1_ywo1p"]
+[ext_resource type="FontFile" uid="uid://blukwtv3sng2w" path="res://fonts/Gamer.ttf" id="2_7vmte"]
+
+[sub_resource type="Theme" id="Theme_y0cti"]
+
+[node name="MultiMenu" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l650h")
+
+[node name="PANELS" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="START" type="PanelContainer" parent="PANELS"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="multiMargin" type="MarginContainer" parent="PANELS/START"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="mulitVbox" type="VBoxContainer" parent="PANELS/START/multiMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="GUI settings" type="Label" parent="PANELS/START/multiMargin/mulitVbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 30
+text = "MULTIPLAYER"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PANELS/START/multiMargin/mulitVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="Host" type="Button" parent="PANELS/START/multiMargin/mulitVbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 70
+text = "HOST
+"
+
+[node name="Join" type="Button" parent="PANELS/START/multiMargin/mulitVbox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 70
+text = "JOIN"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PANELS"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="PLAYERS" type="PanelContainer" parent="PANELS/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayerMargin" type="MarginContainer" parent="PANELS/HBoxContainer/PLAYERS"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="PlayerVbox" type="VBoxContainer" parent="PANELS/HBoxContainer/PLAYERS/PlayerMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="Players" type="Label" parent="PANELS/HBoxContainer/PLAYERS/PlayerMargin/PlayerVbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 30
+text = "PLAYERS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PANELS/HBoxContainer/PLAYERS/PlayerMargin/PlayerVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="Host" type="Label" parent="PANELS/HBoxContainer/PLAYERS/PlayerMargin/PlayerVbox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "HOST:"
+
+[node name="HostPlayer" type="Label" parent="PANELS/HBoxContainer/PLAYERS/PlayerMargin/PlayerVbox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "-------"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PANELS"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="GAME" type="PanelContainer" parent="PANELS/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GameMargin" type="MarginContainer" parent="PANELS/HBoxContainer2/GAME"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="gameVbox" type="VBoxContainer" parent="PANELS/HBoxContainer2/GAME/GameMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="Game settings" type="Label" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 30
+text = "GAME SETTINGS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="CodeLabel" type="Label" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "GAME CODE:"
+
+[node name="Code" type="Label" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "00000
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="DIMENSIONS" type="Label" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "DIMENSIONS"
+
+[node name="X" type="Label" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "X:"
+
+[node name="Xspin" type="SpinBox" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer2"]
+layout_mode = 2
+min_value = 3.0
+max_value = 20.0
+value = 3.0
+
+[node name="Y" type="Label" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "Y:"
+
+[node name="Yspin" type="SpinBox" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox/HBoxContainer2"]
+layout_mode = 2
+min_value = 3.0
+max_value = 20.0
+value = 3.0
+
+[node name="Back" type="Button" parent="PANELS/HBoxContainer2/GAME/GameMargin/gameVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 70
+text = "START"
+
+[node name="JOIN" type="PanelContainer" parent="PANELS/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="multiMargin" type="MarginContainer" parent="PANELS/HBoxContainer2/JOIN"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="mulitVbox" type="VBoxContainer" parent="PANELS/HBoxContainer2/JOIN/multiMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.7
+theme = SubResource("Theme_y0cti")
+theme_override_constants/separation = 16
+
+[node name="JOIN Label" type="Label" parent="PANELS/HBoxContainer2/JOIN/multiMargin/mulitVbox"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ywo1p")
+theme_override_font_sizes/font_size = 30
+text = "JOIN
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PANELS/HBoxContainer2/JOIN/multiMargin/mulitVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PANELS/HBoxContainer2/JOIN/multiMargin/mulitVbox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="PANELS/HBoxContainer2/JOIN/multiMargin/mulitVbox/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 34
+text = "ENTER CODE
+"
+
+[node name="LineEdit" type="LineEdit" parent="PANELS/HBoxContainer2/JOIN/multiMargin/mulitVbox/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 28
+text = "00000"
+
+[node name="Join button" type="Button" parent="PANELS/HBoxContainer2/JOIN/multiMargin/mulitVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 70
+text = "JOIN"
+
+[node name="Back" type="Button" parent="PANELS"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_7vmte")
+theme_override_font_sizes/font_size = 70
+text = "BACK"

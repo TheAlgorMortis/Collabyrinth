@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://btokkifh725we"]
+
+[ext_resource type="Script" path="res://UIs/MpMenu/mp_menu.gd" id="1_k75v6"]
+[ext_resource type="PackedScene" uid="uid://ceqf8bl0qhqw8" path="res://UIs/MazeButton/maze_button.tscn" id="2_kn05c"]
+[ext_resource type="PackedScene" uid="uid://dvlufd8jxxaa5" path="res://mazes/MazeBorders/maze_border.tscn" id="3_xjwyd"]
+
+[node name="MpMenu" type="Node2D"]
+script = ExtResource("1_k75v6")
+
+[node name="Messager" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 221.0
+offset_right = 421.0
+offset_bottom = 254.0
+
+[node name="Buttons" parent="." instance=ExtResource("3_xjwyd")]
+
+[node name="Host" parent="Buttons" instance=ExtResource("2_kn05c")]
+position = Vector2(-1, -1)
+
+[node name="Join" parent="Buttons" instance=ExtResource("2_kn05c")]
+position = Vector2(222, -1)
+
+[node name="PlayerName" type="LineEdit" parent="."]
+offset_left = 82.0
+offset_top = 259.0
+offset_right = 409.0
+offset_bottom = 294.0
+placeholder_text = "Name here"
+
+[node name="Info" type="Label" parent="."]
+offset_left = 51.0
+offset_top = 317.0
+offset_right = 417.0
+offset_bottom = 460.0
+
+[connection signal="clicked" from="Buttons/Host" to="." method="_on_host_clicked"]
+[connection signal="clicked" from="Buttons/Join" to="." method="_on_join_clicked"]

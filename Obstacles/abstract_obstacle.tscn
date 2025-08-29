@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://n42wxep51ogf"]
+
+[ext_resource type="Script" uid="uid://cu43a0pcnrv4h" path="res://Obstacles/abstract_obstacle.gd" id="1_juk6k"]
+
+[node name="AbstractObstacle" type="Area2D"]
+script = ExtResource("1_juk6k")

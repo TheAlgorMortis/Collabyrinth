@@ -1,0 +1,81 @@
+[gd_scene load_steps=16 format=3 uid="uid://df5a6efekwahp"]
+
+[ext_resource type="Script" uid="uid://bk3iqvctmufrx" path="res://Obstacles/Wall/obst_wall.gd" id="1_c3bn7"]
+[ext_resource type="Texture2D" uid="uid://b5yqky00ldiyv" path="res://Obstacles/Wall/UFO/Inner5/frame0000.png" id="2_e5l1o"]
+[ext_resource type="Texture2D" uid="uid://dn3ypx6eerjyp" path="res://Obstacles/Wall/UFO/Inner5/frame0001.png" id="3_s8p6f"]
+[ext_resource type="Texture2D" uid="uid://djmsfbvxvuwbc" path="res://Obstacles/Wall/UFO/Inner5/frame0002.png" id="4_3ojq1"]
+[ext_resource type="Texture2D" uid="uid://c2i8t7dghnocx" path="res://Obstacles/Wall/UFO/Inner5/frame0003.png" id="5_opbqx"]
+[ext_resource type="Texture2D" uid="uid://cdvfwpfc0jm8s" path="res://Obstacles/Wall/UFO/Inner5/frame0004.png" id="6_uqg71"]
+[ext_resource type="Texture2D" uid="uid://dxlaf5yg4sljl" path="res://Obstacles/Wall/UFO/Inner5/frame0005.png" id="7_kt4xb"]
+[ext_resource type="Texture2D" uid="uid://bjxlvflvro4yo" path="res://Obstacles/Wall/BUTTON_HOVER/frame0000.png" id="8_dyelt"]
+[ext_resource type="Texture2D" uid="uid://32biuoq703lo" path="res://Obstacles/Wall/BUTTON_HOVER/frame0001.png" id="9_7buyi"]
+[ext_resource type="Texture2D" uid="uid://cgo5crk088jap" path="res://Obstacles/Wall/BUTTON_HOVER/frame0002.png" id="10_kxkcu"]
+[ext_resource type="Texture2D" uid="uid://dyb06divptywl" path="res://Obstacles/Wall/BUTTON_HOVER/frame0003.png" id="11_kd27p"]
+[ext_resource type="Texture2D" uid="uid://cvnfcysjo5ji" path="res://Obstacles/Wall/BUTTON_HOVER/frame0004.png" id="12_cq8df"]
+[ext_resource type="Texture2D" uid="uid://ccq5ls6c2iepo" path="res://Obstacles/Wall/BUTTON_HOVER/frame0005.png" id="13_k67cs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_14lft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e5l1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s8p6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3ojq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_opbqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uqg71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kt4xb")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dyelt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7buyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kxkcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kd27p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cq8df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k67cs")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbifw"]
+size = Vector2(40, 40)
+
+[node name="ObstWall" type="Area2D"]
+script = ExtResource("1_c3bn7")
+
+[node name="fill_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_14lft")
+animation = &"Default"
+frame_progress = 0.581914
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_mbifw")
